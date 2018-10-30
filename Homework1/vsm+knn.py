@@ -71,7 +71,6 @@ def vsm(input):
                 tf = 1 + math.log(tf)
             else:
                 tf = 0
-            # 过滤掉不含item的document，再计算长度
             df = len(list(filter(lambda p: word in p, new_data)))
             idf = math.log(len(new_data) / df)
             tf_idf = tf * idf
