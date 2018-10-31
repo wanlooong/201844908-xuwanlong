@@ -110,6 +110,9 @@ if __name__ == '__main__':
 #             else:
 #                 shutil.copyfile(os.path.join(path, filename), os.path.join(data_test + '/' + folder, filename))
 #             i += 1
+#     print('ready')
     train_data, train_label = vsm(data_train)
+    print("train_set_end")
     test_data, test_label = vsm(data_test)
+    print("test_set_end")
     knn(train_data, train_label, test_data, test_label)
