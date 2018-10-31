@@ -99,17 +99,17 @@ def knn(train_X, train_Y, test_X, test_Y):
     print(K, "accuracy_score:\t", accuracy_score(test_Y, prediction))
 
 if __name__ == '__main__':
-    for folder in os.listdir(data):
-        path = os.path.join(data, folder)
-        os.makedirs(data_train + '/' + folder)
-        os.makedirs(data_test + '/' + folder)
-        i = 0
-        for filename in os.listdir(path):
-            if i < len(os.listdir(path)) * 0.8:
-                shutil.copyfile(os.path.join(path, filename), os.path.join(data_train + '/' + folder, filename))
-            else:
-                shutil.copyfile(os.path.join(path, filename), os.path.join(data_train + '/' + folder, filename))
-            i += 1
+#     for folder in os.listdir(data):
+#         path = os.path.join(data, folder)
+#         os.makedirs(data_train + '/' + folder)
+#         os.makedirs(data_test + '/' + folder)
+#         i = 0
+#         for filename in os.listdir(path):
+#             if i < len(os.listdir(path)) * 0.8:
+#                 shutil.copyfile(os.path.join(path, filename), os.path.join(data_train + '/' + folder, filename))
+#             else:
+#                 shutil.copyfile(os.path.join(path, filename), os.path.join(data_train + '/' + folder, filename))
+#             i += 1
     train_data, train_label = vsm(data_train)
     test_data, test_label = vsm(data_test)
     knn(train_data, train_label, test_data, test_label)
