@@ -108,7 +108,7 @@ if __name__ == '__main__':
 #             if i < len(os.listdir(path)) * 0.8:
 #                 shutil.copyfile(os.path.join(path, filename), os.path.join(data_train + '/' + folder, filename))
 #             else:
-#                 shutil.copyfile(os.path.join(path, filename), os.path.join(data_train + '/' + folder, filename))
+#                 shutil.copyfile(os.path.join(path, filename), os.path.join(data_test + '/' + folder, filename))
 #             i += 1
     train_data, train_label = vsm(data_train)
     test_data, test_label = vsm(data_test)
