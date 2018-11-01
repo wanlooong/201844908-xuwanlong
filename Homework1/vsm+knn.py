@@ -45,7 +45,7 @@ def vsm(input):
             if word not in stoplist:
                 words.append(stemmer.stem(word))
         new_data.append(words)
-    # 创建字典
+    # 创建词典
     dictionary = []
     if not os.path.exists(_dictionary):
         count = []
@@ -85,7 +85,7 @@ def vsm(input):
 
 def knn(train_X, train_Y, test_X, test_Y):
     similarity = cosine_similarity(test_X, train_X)
-    K = 40
+    K = 30
     prediction = []
     for item in similarity:
         dic = dict(zip(item, train_Y))
@@ -96,7 +96,7 @@ def knn(train_X, train_Y, test_X, test_Y):
         dic = dict(zip(classes, range(len(train_Y))))
         dic = sorted(dic.items(), key=lambda v: v[0], reverse=True)
         prediction.append(dic[0][1])
-    print(K, "accuracy_score:\t", accuracy_score(test_Y, prediction))
+    print("K=", K, "\t Accuracy:\t", accuracy_score(test_Y, prediction))
 
 if __name__ == '__main__':
 #     for folder in os.listdir(data):
