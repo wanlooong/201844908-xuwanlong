@@ -1,0 +1,15 @@
+K_Means: 0.8023213665437697
+
+Affinity Propagation: 0.7831387602380028
+
+Mean_Shift: 0.7265625
+
+Spectral Clustering: 0.8161466348167306
+
+Ward Hierarchical Clustering: 0.7843154591464186
+
+Agglomerative Clustering: 0.7843154591464186
+
+DBSCAN: 0.6987909501721541
+
+Gaussian Mixture: 0.782922639478339
